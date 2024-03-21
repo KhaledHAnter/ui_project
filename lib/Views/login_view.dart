@@ -21,7 +21,7 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 20),
+            const EdgeInsets.only(top: 80, left: 20, right: 20, bottom: 20),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

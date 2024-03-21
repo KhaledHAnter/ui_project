@@ -28,7 +28,7 @@ class UiProject extends StatelessWidget {
         OnBoardingView.id: (context) => const OnBoardingView(),
         LoginView.id: (context) => const LoginView(),
       },
-      initialRoute: LoginView.id,
+      initialRoute: OnBoardingView.id,
     );
   }
 }

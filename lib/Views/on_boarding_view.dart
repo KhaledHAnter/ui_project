@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:ui_project/Views/login_view.dart';
 import 'package:ui_project/Widgets/dot_indicator.dart';
 import 'package:ui_project/Widgets/on_boarding_content.dart';
 import 'package:ui_project/constants.dart';
@@ -98,10 +99,15 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     ),
                   ),
                   Gap(16.h),
-                  Text(
-                    'Already have an account',
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: kprimaryColor, fontWeight: FontWeight.bold),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, LoginView.id);
+                    },
+                    child: Text(
+                      'Already have an account',
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: kprimaryColor, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
               ),
