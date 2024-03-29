@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
+import 'package:ui_project/Views/details_view.dart';
 import 'package:ui_project/Widgets/food_list_item.dart';
 import 'package:ui_project/constants.dart';
 
@@ -155,12 +156,17 @@ class HomeView extends StatelessWidget {
             Column(
               children: List.generate(
                 demo_Data.length,
-                (index) => FoodListItem(
-                  image: demo_Data[index].image,
-                  title: demo_Data[index].title,
-                  rate: demo_Data[index].rate,
-                  delivery: demo_Data[index].delivery,
-                  price: demo_Data[index].price,
+                (index) => GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, DetailsView.id);
+                  },
+                  child: FoodListItem(
+                    image: demo_Data[index].image,
+                    title: demo_Data[index].title,
+                    rate: demo_Data[index].rate,
+                    delivery: demo_Data[index].delivery,
+                    price: demo_Data[index].price,
+                  ),
                 ),
               ),
             ),

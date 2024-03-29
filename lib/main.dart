@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ui_project/Views/details_view.dart';
 import 'package:ui_project/Views/home_view.dart';
 import 'package:ui_project/Views/login_view.dart';
 import 'package:ui_project/Views/on_boarding_view.dart';
@@ -31,8 +32,9 @@ class UiProject extends StatelessWidget {
         LoginView.id: (context) => const LoginView(),
         RegisterView.id: (context) => const RegisterView(),
         HomeView.id: (context) => const HomeView(),
+        DetailsView.id: (context) => const DetailsView(),
       },
-      initialRoute: OnBoardingView.id,
+      initialRoute: HomeView.id,
     );
   }
 }
