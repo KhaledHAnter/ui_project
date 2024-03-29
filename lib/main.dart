@@ -34,7 +34,7 @@ class UiProject extends StatelessWidget {
         HomeView.id: (context) => const HomeView(),
         DetailsView.id: (context) => const DetailsView(),
       },
-      initialRoute: HomeView.id,
+      initialRoute: OnBoardingView.id,
     );
   }
 }

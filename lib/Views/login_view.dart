@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
+import 'package:ui_project/Views/home_view.dart';
 import 'package:ui_project/constants.dart';
 
 class LoginView extends StatefulWidget {
@@ -133,20 +134,25 @@ class _LoginViewState extends State<LoginView> {
                 ],
               ),
               Gap(80.h),
-              Container(
-                height: 60.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: kprimaryColor,
-                  borderRadius: BorderRadius.circular(32.0),
-                ),
-                child: Center(
-                  child: Text(
-                    'Sign In',
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, HomeView.id);
+                },
+                child: Container(
+                  height: 60.h,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: kprimaryColor,
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Sign In',
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
                   ),
                 ),
               ),

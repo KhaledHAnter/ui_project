@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
+import 'package:ui_project/Views/login_view.dart';
 import 'package:ui_project/constants.dart';
 
 class RegisterView extends StatefulWidget {
@@ -153,20 +154,25 @@ class _RegisterViewState extends State<RegisterView> {
                 ),
               ),
               Gap(50.h),
-              Container(
-                height: 60.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: kprimaryColor,
-                  borderRadius: BorderRadius.circular(32.0),
-                ),
-                child: Center(
-                  child: Text(
-                    'Create Account',
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, LoginView.id);
+                },
+                child: Container(
+                  height: 60.h,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: kprimaryColor,
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Create Account',
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
                   ),
                 ),
               ),
