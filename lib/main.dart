@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ui_project/Views/home_view.dart';
 import 'package:ui_project/Views/login_view.dart';
 import 'package:ui_project/Views/on_boarding_view.dart';
+import 'package:ui_project/Views/register_view.dart';
 
 void main() async {
   runApp(const UiProject());
@@ -27,6 +29,8 @@ class UiProject extends StatelessWidget {
       routes: {
         OnBoardingView.id: (context) => const OnBoardingView(),
         LoginView.id: (context) => const LoginView(),
+        RegisterView.id: (context) => const RegisterView(),
+        HomeView.id: (context) => const HomeView(),
       },
       initialRoute: OnBoardingView.id,
     );

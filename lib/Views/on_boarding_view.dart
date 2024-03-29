@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:ui_project/Views/login_view.dart';
+import 'package:ui_project/Views/register_view.dart';
 import 'package:ui_project/Widgets/dot_indicator.dart';
 import 'package:ui_project/Widgets/on_boarding_content.dart';
 import 'package:ui_project/constants.dart';
@@ -81,20 +82,26 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               flex: 2,
               child: Column(
                 children: <Widget>[
-                  Container(
-                    height: 60.h,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: kprimaryColor,
-                      borderRadius: BorderRadius.circular(32.0),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Create Account',
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, RegisterView.id);
+                    },
+                    child: Container(
+                      height: 60.h,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: kprimaryColor,
+                        borderRadius: BorderRadius.circular(32.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Create Account',
+                          style:
+                              Theme.of(context).textTheme.titleLarge!.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                        ),
                       ),
                     ),
                   ),

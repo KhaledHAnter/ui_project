@@ -95,7 +95,7 @@ class _LoginViewState extends State<LoginView> {
                 decoration: InputDecoration(
                   filled: true,
                   prefixIcon: const Icon(
-                    FontAwesomeIcons.lock,
+                    Icons.password,
                     size: 25,
                   ),
                   prefixIconColor: Colors.grey,

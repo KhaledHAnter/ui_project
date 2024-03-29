@@ -40,12 +40,14 @@ class OnboardingContent extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           Gap(8.h),
-          Text(subtitle,
-              textAlign: TextAlign.center,
-              style: Theme.of(context)
-                  .textTheme
-                  .labelLarge!
-                  .copyWith(color: Colors.grey)),
+          Text(
+            subtitle,
+            textAlign: TextAlign.center,
+            style: Theme.of(context)
+                .textTheme
+                .labelLarge!
+                .copyWith(color: Colors.grey),
+          ),
         ],
       ),
     );
